@@ -24,6 +24,7 @@ import com.firefly.masters.interfaces.dtos.contractrole.v1.ContractRoleScopeDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -181,7 +182,7 @@ public class ContractRoleScopeController {
                     description = "Active contract role scopes retrieved successfully",
                     content = @Content(
                             mediaType = MediaType.APPLICATION_JSON_VALUE,
-                            schema = @Schema(implementation = ContractRoleScopeDTO.class)
+                            array = @ArraySchema(schema = @Schema(implementation = ContractRoleScopeDTO.class))
                     )
             )
     })
