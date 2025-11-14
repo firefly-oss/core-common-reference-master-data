@@ -17,9 +17,11 @@
 
 package com.firefly.masters.web.controllers.legal.v1;
 
+import com.firefly.common.core.filters.FilterRequest;
 import com.firefly.common.core.queries.PaginationRequest;
 import com.firefly.common.core.queries.PaginationResponse;
 import com.firefly.masters.core.services.legal.v1.LegalFormService;
+import com.firefly.masters.interfaces.dtos.currency.v1.CurrencyDTO;
 import com.firefly.masters.interfaces.dtos.legal.v1.LegalFormDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -50,19 +52,14 @@ public class LegalFormController {
     @ApiResponses({
             @ApiResponse(
                     responseCode = "200",
-                    description = "Successfully retrieved list of legal forms",
-                    content = @Content(
-                            mediaType = MediaType.APPLICATION_JSON_VALUE,
-                            schema = @Schema(implementation = PaginationResponse.class)
-                    )
+                    description = "Successfully retrieved list of legal forms"
             )
     })
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/filter", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Mono<ResponseEntity<PaginationResponse<LegalFormDTO>>> listLegalForms(
-            @ParameterObject
-            @ModelAttribute PaginationRequest paginationRequest
+            @RequestBody FilterRequest<LegalFormDTO> filterRequest
     ) {
-        return service.listLegalForms(paginationRequest)
+        return service.listLegalForms(filterRequest)
                 .map(ResponseEntity::ok);
     }
 

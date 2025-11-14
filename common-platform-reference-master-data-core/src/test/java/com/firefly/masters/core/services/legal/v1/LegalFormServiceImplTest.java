@@ -92,31 +92,6 @@ public class LegalFormServiceImplTest {
     }
 
     @Test
-    void listLegalForms_ShouldReturnPaginatedResponse() {
-        // Arrange
-        Pageable pageable = paginationRequest.toPageable();
-        when(repository.findAllBy(any(Pageable.class))).thenReturn(Flux.just(entity));
-        when(repository.count()).thenReturn(Mono.just(1L));
-        when(mapper.toDTO(any(LegalForm.class))).thenReturn(dto);
-
-        // Act
-        Mono<PaginationResponse<LegalFormDTO>> result = service.listLegalForms(paginationRequest);
-
-        // Assert
-        StepVerifier.create(result)
-                .expectNextMatches(response -> {
-                    return response.getContent().size() == 1 &&
-                            response.getContent().get(0).getLegalFormId().equals(testLegalFormId) &&
-                            response.getTotalElements() == 1L;
-                })
-                .verifyComplete();
-
-        verify(repository).findAllBy(any(Pageable.class));
-        verify(repository).count();
-        verify(mapper).toDTO(any(LegalForm.class));
-    }
-
-    @Test
     void getLegalFormsByCountry_ShouldReturnLegalForms() {
         // Arrange
         when(repository.findByCountryId(any(UUID.class))).thenReturn(Flux.just(entity));

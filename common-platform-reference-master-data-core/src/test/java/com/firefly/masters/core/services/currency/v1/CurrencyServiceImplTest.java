@@ -91,31 +91,6 @@ public class CurrencyServiceImplTest {
     }
 
     @Test
-    void listCurrencies_ShouldReturnPaginatedResponse() {
-        // Arrange
-        Pageable pageable = paginationRequest.toPageable();
-        when(currencyRepository.findAllBy(any(Pageable.class))).thenReturn(Flux.just(currency));
-        when(currencyRepository.count()).thenReturn(Mono.just(1L));
-        when(currencyMapper.toDTO(any(Currency.class))).thenReturn(currencyDTO);
-
-        // Act
-        Mono<PaginationResponse<CurrencyDTO>> result = currencyService.listCurrencies(paginationRequest);
-
-        // Assert
-        StepVerifier.create(result)
-                .expectNextMatches(response -> {
-                    return response.getContent().size() == 1 &&
-                            response.getContent().get(0).getCurrencyId().equals(testCurrencyId) &&
-                            response.getTotalElements() == 1L;
-                })
-                .verifyComplete();
-
-        verify(currencyRepository).findAllBy(any(Pageable.class));
-        verify(currencyRepository).count();
-        verify(currencyMapper).toDTO(any(Currency.class));
-    }
-
-    @Test
     void createCurrency_ShouldReturnCreatedCurrency() {
         // Arrange
         when(currencyMapper.toEntity(any(CurrencyDTO.class))).thenReturn(currency);

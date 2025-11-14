@@ -17,6 +17,7 @@
 
 package com.firefly.masters.core.services.legal.v1;
 
+import com.firefly.common.core.filters.FilterRequest;
 import com.firefly.common.core.queries.PaginationRequest;
 import com.firefly.common.core.queries.PaginationResponse;
 import com.firefly.masters.interfaces.dtos.legal.v1.LegalFormDTO;
@@ -25,13 +26,14 @@ import reactor.core.publisher.Mono;
 import java.util.UUID;
 
 public interface LegalFormService {
+
     /**
-     * Retrieves a paginated list of legal forms based on the provided pagination request.
+     * Retrieves a paginated list of legal forms based on the provided filter request.
      *
-     * @param paginationRequest the pagination request containing page number, size, and sorting options
-     * @return a Mono emitting a PaginationResponse containing a list of LegalFormDTO objects
+     * @param filterRequest an object containing filtering and pagination criteria for retrieving legal forms
+     * @return a Mono emitting a PaginationResponse containing a list of LegalFormDTOs that match the filter criteria
      */
-    Mono<PaginationResponse<LegalFormDTO>> listLegalForms(PaginationRequest paginationRequest);
+    Mono<PaginationResponse<LegalFormDTO>> listLegalForms(FilterRequest<LegalFormDTO> filterRequest);
     
     /**
      * Retrieves all legal forms for a specific country.

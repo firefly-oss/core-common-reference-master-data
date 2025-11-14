@@ -17,11 +17,15 @@
 
 package com.firefly.masters.core.services.currency.v1;
 
+import com.firefly.common.core.filters.FilterRequest;
+import com.firefly.common.core.filters.FilterUtils;
 import com.firefly.common.core.queries.PaginationRequest;
 import com.firefly.common.core.queries.PaginationResponse;
 import com.firefly.common.core.queries.PaginationUtils;
 import com.firefly.masters.core.mappers.currency.v1.CurrencyMapper;
+import com.firefly.masters.interfaces.dtos.country.v1.CountryDTO;
 import com.firefly.masters.interfaces.dtos.currency.v1.CurrencyDTO;
+import com.firefly.masters.models.entities.country.v1.Country;
 import com.firefly.masters.models.entities.currency.v1.Currency;
 import com.firefly.masters.models.repositories.currency.v1.CurrencyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,13 +45,13 @@ public class CurrencyServiceImpl implements CurrencyService {
     private CurrencyMapper mapper;
 
     @Override
-    public Mono<PaginationResponse<CurrencyDTO>> listCurrencies(PaginationRequest paginationRequest) {
-        return PaginationUtils.paginateQuery(
-                paginationRequest,
-                mapper::toDTO,
-                pageable -> repository.findAllBy(pageable),
-                () -> repository.count()
-        );
+    public Mono<PaginationResponse<CurrencyDTO>> listCurrencies(FilterRequest<CurrencyDTO> filterRequest) {
+        return FilterUtils
+                .createFilter(
+                        Currency.class,
+                        mapper::toDTO
+                )
+                .filter(filterRequest);
     }
 
     @Override

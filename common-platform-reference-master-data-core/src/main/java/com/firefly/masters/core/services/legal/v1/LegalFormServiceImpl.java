@@ -17,11 +17,14 @@
 
 package com.firefly.masters.core.services.legal.v1;
 
+import com.firefly.common.core.filters.FilterRequest;
+import com.firefly.common.core.filters.FilterUtils;
 import com.firefly.common.core.queries.PaginationRequest;
 import com.firefly.common.core.queries.PaginationResponse;
 import com.firefly.common.core.queries.PaginationUtils;
 import com.firefly.masters.core.mappers.legal.v1.LegalFormMapper;
 import com.firefly.masters.interfaces.dtos.legal.v1.LegalFormDTO;
+import com.firefly.masters.models.entities.currency.v1.Currency;
 import com.firefly.masters.models.entities.legal.v1.LegalForm;
 import com.firefly.masters.models.repositories.legal.v1.LegalFormRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,13 +45,13 @@ public class LegalFormServiceImpl implements LegalFormService {
     private LegalFormMapper mapper;
 
     @Override
-    public Mono<PaginationResponse<LegalFormDTO>> listLegalForms(PaginationRequest paginationRequest) {
-        return PaginationUtils.paginateQuery(
-                paginationRequest,
-                mapper::toDTO,
-                pageable -> repository.findAllBy(pageable),
-                () -> repository.count()
-        );
+    public Mono<PaginationResponse<LegalFormDTO>> listLegalForms(FilterRequest<LegalFormDTO> filterRequest) {
+        return FilterUtils
+                .createFilter(
+                        LegalForm.class,
+                        mapper::toDTO
+                )
+                .filter(filterRequest);
     }
 
     @Override

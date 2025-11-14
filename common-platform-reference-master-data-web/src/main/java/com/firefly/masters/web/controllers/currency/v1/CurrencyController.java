@@ -17,9 +17,11 @@
 
 package com.firefly.masters.web.controllers.currency.v1;
 
+import com.firefly.common.core.filters.FilterRequest;
 import com.firefly.common.core.queries.PaginationRequest;
 import com.firefly.common.core.queries.PaginationResponse;
 import com.firefly.masters.core.services.currency.v1.CurrencyServiceImpl;
+import com.firefly.masters.interfaces.dtos.country.v1.CountryDTO;
 import com.firefly.masters.interfaces.dtos.currency.v1.CurrencyDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -49,21 +51,18 @@ public class CurrencyController {
     @ApiResponses({
             @ApiResponse(
                     responseCode = "200",
-                    description = "Successfully retrieved list of currencies",
-                    content = @Content(
-                            mediaType = MediaType.APPLICATION_JSON_VALUE,
-                            schema = @Schema(implementation = PaginationResponse.class)
-                    )
+                    description = "Successfully retrieved list of currencies"
             )
     })
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public Mono<ResponseEntity<PaginationResponse<CurrencyDTO>>> listCurrencies(
-            @ParameterObject
-            @ModelAttribute PaginationRequest paginationRequest
+    @PostMapping(value = "/filter", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Mono<ResponseEntity<PaginationResponse<CurrencyDTO>>> filterCurrencies(
+            @RequestBody FilterRequest<CurrencyDTO> filterRequest
     ) {
-        return service.listCurrencies(paginationRequest)
+        return service.listCurrencies(filterRequest)
                 .map(ResponseEntity::ok);
     }
+
+
 
     @Operation(summary = "Create Currency", description = "Create a new currency.")
     @ApiResponses({

@@ -17,6 +17,7 @@
 
 package com.firefly.masters.core.services.currency.v1;
 
+import com.firefly.common.core.filters.FilterRequest;
 import com.firefly.common.core.queries.PaginationRequest;
 import com.firefly.common.core.queries.PaginationResponse;
 import com.firefly.masters.interfaces.dtos.currency.v1.CurrencyDTO;
@@ -24,13 +25,14 @@ import reactor.core.publisher.Mono;
 import java.util.UUID;
 
 public interface CurrencyService {
+
     /**
-     * Retrieves a paginated list of currencies.
+     * Retrieves a paginated list of currencies based on the provided filter criteria.
      *
-     * @param paginationRequest the pagination request containing page size, page number, and other pagination-related details
-     * @return a Mono containing a paginated response of CurrencyDTO objects
+     * @param filterRequest the filter and pagination criteria used to fetch the list of currencies
+     * @return a Mono emitting a PaginationResponse containing a list of CurrencyDTO objects and pagination details
      */
-    Mono<PaginationResponse<CurrencyDTO>> listCurrencies(PaginationRequest paginationRequest);
+    Mono<PaginationResponse<CurrencyDTO>> listCurrencies(FilterRequest<CurrencyDTO> filterRequest);
 
     /**
      * Creates a new currency entry based on the provided CurrencyDTO.
