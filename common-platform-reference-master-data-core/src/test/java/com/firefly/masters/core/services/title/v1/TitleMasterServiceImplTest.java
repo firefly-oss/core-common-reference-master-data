@@ -17,9 +17,9 @@
 
 package com.firefly.masters.core.services.title.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationRequest;
 import com.firefly.masters.core.utils.TestPaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.mappers.title.v1.TitleMasterMapper;
 import com.firefly.masters.interfaces.dtos.title.v1.TitleMasterDTO;
 import com.firefly.masters.interfaces.enums.commons.v1.StatusEnum;

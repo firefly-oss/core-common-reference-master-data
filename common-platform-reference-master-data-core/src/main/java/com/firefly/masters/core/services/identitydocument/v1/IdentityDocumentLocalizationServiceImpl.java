@@ -17,9 +17,9 @@
 
 package com.firefly.masters.core.services.identitydocument.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
-import com.firefly.common.core.queries.PaginationUtils;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationUtils;
 import com.firefly.masters.core.mappers.identitydocument.v1.IdentityDocumentLocalizationMapper;
 import com.firefly.masters.interfaces.dtos.identitydocument.v1.IdentityDocumentLocalizationDTO;
 import com.firefly.masters.models.entities.identitydocument.v1.IdentityDocumentLocalization;

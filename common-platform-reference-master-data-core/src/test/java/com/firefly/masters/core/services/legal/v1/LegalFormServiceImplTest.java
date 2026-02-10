@@ -17,7 +17,7 @@
 
 package com.firefly.masters.core.services.legal.v1;
 
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.mappers.legal.v1.LegalFormMapper;
 import com.firefly.masters.core.utils.TestPaginationRequest;
 import com.firefly.masters.interfaces.dtos.legal.v1.LegalFormDTO;

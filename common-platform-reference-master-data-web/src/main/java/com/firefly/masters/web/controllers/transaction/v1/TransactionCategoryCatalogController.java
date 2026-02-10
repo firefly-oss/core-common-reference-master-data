@@ -17,8 +17,8 @@
 
 package com.firefly.masters.web.controllers.transaction.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.services.transaction.v1.TransactionCategoryCatalogService;
 import com.firefly.masters.interfaces.dtos.transaction.v1.TransactionCategoryCatalogDTO;
 import io.swagger.v3.oas.annotations.Operation;

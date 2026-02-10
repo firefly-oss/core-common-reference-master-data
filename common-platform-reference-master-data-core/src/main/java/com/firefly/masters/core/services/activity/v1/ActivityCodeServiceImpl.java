@@ -17,9 +17,9 @@
 
 package com.firefly.masters.core.services.activity.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
-import com.firefly.common.core.queries.PaginationUtils;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationUtils;
 import com.firefly.masters.core.mappers.activity.v1.ActivityCodeMapper;
 import com.firefly.masters.interfaces.dtos.activity.v1.ActivityCodeDTO;
 import com.firefly.masters.models.entities.activity.v1.ActivityCode;

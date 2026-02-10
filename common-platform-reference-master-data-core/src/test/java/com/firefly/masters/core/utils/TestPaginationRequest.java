@@ -17,7 +17,7 @@
 
 package com.firefly.masters.core.utils;
 
-import com.firefly.common.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationRequest;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 

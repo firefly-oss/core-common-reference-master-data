@@ -17,9 +17,9 @@
 
 package com.firefly.masters.core.services.currency.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationRequest;
 import com.firefly.masters.core.utils.TestPaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.mappers.currency.v1.CurrencyMapper;
 import com.firefly.masters.interfaces.dtos.currency.v1.CurrencyDTO;
 import com.firefly.masters.interfaces.enums.commons.v1.StatusEnum;

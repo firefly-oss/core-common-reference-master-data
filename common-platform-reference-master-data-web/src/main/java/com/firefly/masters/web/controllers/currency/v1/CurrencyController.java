@@ -17,9 +17,9 @@
 
 package com.firefly.masters.web.controllers.currency.v1;
 
-import com.firefly.common.core.filters.FilterRequest;
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.filters.FilterRequest;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.services.currency.v1.CurrencyServiceImpl;
 import com.firefly.masters.interfaces.dtos.country.v1.CountryDTO;
 import com.firefly.masters.interfaces.dtos.currency.v1.CurrencyDTO;

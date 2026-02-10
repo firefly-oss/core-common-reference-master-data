@@ -17,7 +17,7 @@
 
 package com.firefly.masters.core.services.locale.v1;
 
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.mappers.locale.v1.LanguageLocaleMapper;
 import com.firefly.masters.core.utils.TestPaginationRequest;
 import com.firefly.masters.interfaces.dtos.locale.v1.LanguageLocaleDTO;

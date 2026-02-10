@@ -17,8 +17,8 @@
 
 package com.firefly.masters.web.controllers.contractrole.v1;
 
-import com.firefly.common.core.filters.FilterRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.filters.FilterRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.services.contractrole.v1.ContractRoleService;
 import com.firefly.masters.interfaces.dtos.contractrole.v1.ContractRoleDTO;
 import io.swagger.v3.oas.annotations.Operation;

@@ -17,8 +17,8 @@
 
 package com.firefly.masters.core.services.notification.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.interfaces.dtos.notification.v1.MessageTypeCatalogDTO;
 import reactor.core.publisher.Mono;
 import java.util.UUID;

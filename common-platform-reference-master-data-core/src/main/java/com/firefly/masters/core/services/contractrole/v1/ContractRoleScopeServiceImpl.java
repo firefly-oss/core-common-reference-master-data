@@ -17,9 +17,9 @@
 
 package com.firefly.masters.core.services.contractrole.v1;
 
-import com.firefly.common.core.filters.FilterRequest;
-import com.firefly.common.core.filters.FilterUtils;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.filters.FilterRequest;
+import org.fireflyframework.core.filters.FilterUtils;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.mappers.contractrole.v1.ContractRoleScopeMapper;
 import com.firefly.masters.interfaces.dtos.contractrole.v1.ContractRoleScopeDTO;
 import com.firefly.masters.models.entities.contractrole.v1.ContractRoleScope;

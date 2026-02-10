@@ -17,8 +17,8 @@
 
 package com.firefly.masters.interfaces.dtos.bank.v1;
 
-import com.firefly.annotations.ValidBic;
-import com.firefly.core.utils.annotations.FilterableId;
+import org.fireflyframework.annotations.ValidBic;
+import org.fireflyframework.utils.annotations.FilterableId;
 import com.firefly.masters.interfaces.enums.commons.v1.StatusEnum;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

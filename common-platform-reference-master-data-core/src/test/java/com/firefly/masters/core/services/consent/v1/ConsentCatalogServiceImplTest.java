@@ -17,7 +17,7 @@
 
 package com.firefly.masters.core.services.consent.v1;
 
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.mappers.consent.v1.ConsentCatalogMapper;
 import com.firefly.masters.core.utils.TestPaginationRequest;
 import com.firefly.masters.interfaces.dtos.consent.v1.ConsentCatalogDTO;

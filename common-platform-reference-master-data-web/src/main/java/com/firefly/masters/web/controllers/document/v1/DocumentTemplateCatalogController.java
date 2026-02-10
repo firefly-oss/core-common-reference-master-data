@@ -17,8 +17,8 @@
 
 package com.firefly.masters.web.controllers.document.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.interfaces.dtos.document.v1.DocumentTemplateCatalogDTO;
 import com.firefly.masters.core.services.document.v1.DocumentTemplateCatalogService;
 import io.swagger.v3.oas.annotations.Operation;

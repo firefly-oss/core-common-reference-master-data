@@ -17,9 +17,9 @@
 
 package com.firefly.masters.core.services.document.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
-import com.firefly.common.core.queries.PaginationUtils;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationUtils;
 import com.firefly.masters.core.mappers.document.v1.DocumentTemplateTypeCatalogMapper;
 import com.firefly.masters.interfaces.dtos.document.v1.DocumentTemplateTypeCatalogDTO;
 import com.firefly.masters.models.entities.document.v1.DocumentTemplateTypeCatalog;

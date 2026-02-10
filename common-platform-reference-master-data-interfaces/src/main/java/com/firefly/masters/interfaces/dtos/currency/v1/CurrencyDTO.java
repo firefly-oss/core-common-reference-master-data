@@ -17,7 +17,7 @@
 
 package com.firefly.masters.interfaces.dtos.currency.v1;
 
-import com.firefly.annotations.ValidCurrencyCode;
+import org.fireflyframework.annotations.ValidCurrencyCode;
 import com.firefly.masters.interfaces.enums.commons.v1.StatusEnum;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

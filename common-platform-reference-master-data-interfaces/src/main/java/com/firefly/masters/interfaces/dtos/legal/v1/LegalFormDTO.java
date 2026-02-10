@@ -17,7 +17,7 @@
 
 package com.firefly.masters.interfaces.dtos.legal.v1;
 
-import com.firefly.core.utils.annotations.FilterableId;
+import org.fireflyframework.utils.annotations.FilterableId;
 import com.firefly.masters.interfaces.enums.commons.v1.StatusEnum;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

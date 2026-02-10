@@ -17,9 +17,9 @@
 
 package com.firefly.masters.core.services.contractdocumenttype.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
-import com.firefly.common.core.queries.PaginationUtils;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationUtils;
 import com.firefly.masters.core.mappers.contractdocumenttype.v1.ContractDocumentTypeMapper;
 import com.firefly.masters.interfaces.dtos.contractdocumenttype.v1.ContractDocumentTypeDTO;
 import com.firefly.masters.models.entities.contractdocumenttype.v1.ContractDocumentType;

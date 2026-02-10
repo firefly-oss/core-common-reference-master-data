@@ -17,8 +17,8 @@
 
 package com.firefly.masters.web.controllers.consent.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.services.consent.v1.ConsentCatalogServiceImpl;
 import com.firefly.masters.interfaces.dtos.consent.v1.ConsentCatalogDTO;
 import io.swagger.v3.oas.annotations.Operation;

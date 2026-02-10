@@ -17,11 +17,11 @@
 
 package com.firefly.masters.core.services.legal.v1;
 
-import com.firefly.common.core.filters.FilterRequest;
-import com.firefly.common.core.filters.FilterUtils;
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
-import com.firefly.common.core.queries.PaginationUtils;
+import org.fireflyframework.core.filters.FilterRequest;
+import org.fireflyframework.core.filters.FilterUtils;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationUtils;
 import com.firefly.masters.core.mappers.legal.v1.LegalFormMapper;
 import com.firefly.masters.interfaces.dtos.legal.v1.LegalFormDTO;
 import com.firefly.masters.models.entities.currency.v1.Currency;

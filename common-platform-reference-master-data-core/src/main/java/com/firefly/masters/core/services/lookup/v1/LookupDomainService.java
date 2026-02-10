@@ -17,8 +17,8 @@
 
 package com.firefly.masters.core.services.lookup.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.interfaces.dtos.lookup.v1.LookupDomainDTO;
 import reactor.core.publisher.Mono;
 import java.util.UUID;

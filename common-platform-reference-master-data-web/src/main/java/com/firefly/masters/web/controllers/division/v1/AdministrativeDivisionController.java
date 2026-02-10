@@ -17,8 +17,8 @@
 
 package com.firefly.masters.web.controllers.division.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.core.services.division.v1.AdministrativeDivisionService;
 import com.firefly.masters.interfaces.dtos.division.v1.AdministrativeDivisionDTO;
 import io.swagger.v3.oas.annotations.Operation;

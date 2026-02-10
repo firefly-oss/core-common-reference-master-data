@@ -17,8 +17,8 @@
 
 package com.firefly.masters.web.controllers.identitydocument.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
 import com.firefly.masters.interfaces.dtos.identitydocument.v1.IdentityDocumentCatalogDTO;
 import com.firefly.masters.core.services.identitydocument.v1.IdentityDocumentCatalogService;
 import io.swagger.v3.oas.annotations.Operation;

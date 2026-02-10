@@ -17,9 +17,9 @@
 
 package com.firefly.masters.core.services.division.v1;
 
-import com.firefly.common.core.queries.PaginationRequest;
-import com.firefly.common.core.queries.PaginationResponse;
-import com.firefly.common.core.queries.PaginationUtils;
+import org.fireflyframework.core.queries.PaginationRequest;
+import org.fireflyframework.core.queries.PaginationResponse;
+import org.fireflyframework.core.queries.PaginationUtils;
 import com.firefly.masters.core.mappers.division.v1.AdministrativeDivisionMapper;
 import com.firefly.masters.interfaces.dtos.division.v1.AdministrativeDivisionDTO;
 import com.firefly.masters.models.entities.division.v1.AdministrativeDivision;
