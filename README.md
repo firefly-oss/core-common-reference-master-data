@@ -196,7 +196,7 @@ The microservice manages the following types of master data:
 
 ## Technical Stack
 
-- **Java 21**: Latest LTS version with modern language features
+- **Java 25**: Latest LTS version with modern language features
 - **Spring Boot 3.x**: Application framework with latest features
 - **Spring WebFlux**: Reactive web framework for non-blocking APIs
 - **R2DBC**: Reactive database connectivity for non-blocking database access
@@ -215,7 +215,7 @@ The microservice manages the following types of master data:
 
 ### Prerequisites
 
-- Java 21 or higher
+- Java 25 or higher
 - PostgreSQL 13 or higher
 - Maven 3.8 or higher
 - Docker (optional, for containerized deployment)
