@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.firefly</groupId>
-        <artifactId>common-platform-reference-master-data</artifactId>
+        <artifactId>core-common-reference-master-data</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>common-platform-reference-master-data-sdk</artifactId>
+    <artifactId>core-common-reference-master-data-sdk</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,7 +27,7 @@
         <!-- Web module for OpenAPI spec -->
         <dependency>
             <groupId>com.firefly</groupId>
-            <artifactId>common-platform-reference-master-data-web</artifactId>
+            <artifactId>core-common-reference-master-data-web</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -99,7 +99,7 @@
                 <version>${openapi-generator.version}</version>
                 <executions>
                     <execution>
-                        <id>common-platform-reference-master-data-sdk</id>
+                        <id>core-common-reference-master-data-sdk</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>

@@ -11,14 +11,14 @@
     </parent>
 
     <groupId>com.firefly</groupId>
-    <artifactId>common-platform-reference-master-data</artifactId>
+    <artifactId>core-common-reference-master-data</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>common-platform-reference-master-data-core</module>
-        <module>common-platform-reference-master-data-models</module>
-        <module>common-platform-reference-master-data-interfaces</module>
-        <module>common-platform-reference-master-data-web</module>
-        <module>common-platform-reference-master-data-sdk</module>
+        <module>core-common-reference-master-data-core</module>
+        <module>core-common-reference-master-data-models</module>
+        <module>core-common-reference-master-data-interfaces</module>
+        <module>core-common-reference-master-data-web</module>
+        <module>core-common-reference-master-data-sdk</module>
     </modules>
 
     <properties>
@@ -27,9 +27,9 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <fireflyframework.bom.version>26.01.01</fireflyframework.bom.version>
-        <common-platform-reference-master-data.version>
+        <core-common-reference-master-data.version>
             1.0.0-SNAPSHOT
-        </common-platform-reference-master-data.version>
+        </core-common-reference-master-data.version>
     </properties>
 
     <dependencyManagement>
@@ -44,27 +44,27 @@
             <!-- Internal modules -->
             <dependency>
                 <groupId>com.firefly</groupId>
-                <artifactId>common-platform-reference-master-data-interfaces</artifactId>
+                <artifactId>core-common-reference-master-data-interfaces</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.firefly</groupId>
-                <artifactId>common-platform-reference-master-data-models</artifactId>
+                <artifactId>core-common-reference-master-data-models</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.firefly</groupId>
-                <artifactId>common-platform-reference-master-data-core</artifactId>
+                <artifactId>core-common-reference-master-data-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.firefly</groupId>
-                <artifactId>common-platform-reference-master-data-web</artifactId>
+                <artifactId>core-common-reference-master-data-web</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.firefly</groupId>
-                <artifactId>common-platform-reference-master-data-sdk</artifactId>
+                <artifactId>core-common-reference-master-data-sdk</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

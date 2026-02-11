@@ -87,7 +87,7 @@ This utility class simplifies testing of paginated queries by providing a conven
 To run all tests in the test suite, use the following Maven command:
 
 ```bash
-mvn test -pl common-platform-reference-master-data-core
+mvn test -pl core-common-reference-master-data-core
 ```
 
 ### Running Specific Tests
@@ -95,13 +95,13 @@ mvn test -pl common-platform-reference-master-data-core
 To run a specific test class, use:
 
 ```bash
-mvn test -pl common-platform-reference-master-data-core -Dtest=CountryServiceImplTest
+mvn test -pl core-common-reference-master-data-core -Dtest=CountryServiceImplTest
 ```
 
 To run a specific test method, use:
 
 ```bash
-mvn test -pl common-platform-reference-master-data-core -Dtest=CountryServiceImplTest#createCountry_ShouldReturnCreatedCountry
+mvn test -pl core-common-reference-master-data-core -Dtest=CountryServiceImplTest#createCountry_ShouldReturnCreatedCountry
 ```
 
 ## Test Patterns

@@ -62,22 +62,22 @@ The Reference Master Data Microservice follows a reactive microservice architect
 
 The microservice is organized into the following modules:
 
-- **common-platform-reference-master-data-core**: Core business logic and service implementations
+- **core-common-reference-master-data-core**: Core business logic and service implementations
   - Contains service implementations for all catalog entities
   - Implements business rules and validation logic
   - Handles data transformation between entities and DTOs
 
-- **common-platform-reference-master-data-models**: Data models, entities, and repositories
+- **core-common-reference-master-data-models**: Data models, entities, and repositories
   - Defines database entities and their relationships
   - Contains repository interfaces for data access
   - Includes database migration scripts
 
-- **common-platform-reference-master-data-interfaces**: DTOs and service interfaces
+- **core-common-reference-master-data-interfaces**: DTOs and service interfaces
   - Defines Data Transfer Objects (DTOs) for API requests and responses
   - Contains service interfaces that define the contract for service implementations
   - Includes request/response models for API endpoints
 
-- **common-platform-reference-master-data-web**: REST controllers and web configuration
+- **core-common-reference-master-data-web**: REST controllers and web configuration
   - Implements REST controllers for all API endpoints
   - Contains web-specific configurations
   - Handles API request validation and error responses
@@ -244,8 +244,8 @@ Alternatively, you can create an `.env` file in the project root with these vari
 
 ```bash
 # Clone the repository
-git clone https://github.com/firefly-oss/common-platform-reference-master-data.git
-cd common-platform-reference-master-data
+git clone https://github.com/firefly-oss/core-common-reference-master-data.git
+cd core-common-reference-master-data
 
 # Build the project
 mvn clean install
@@ -255,10 +255,10 @@ mvn clean install
 
 ```bash
 # Run with Maven
-mvn spring-boot:run -pl common-platform-reference-master-data-web
+mvn spring-boot:run -pl core-common-reference-master-data-web
 
 # Or run with Java
-java -jar common-platform-reference-master-data-web/target/common-platform-reference-master-data-web-1.0.0-SNAPSHOT.jar
+java -jar core-common-reference-master-data-web/target/core-common-reference-master-data-web-1.0.0-SNAPSHOT.jar
 ```
 
 ## API Documentation
@@ -284,7 +284,7 @@ The microservice includes a comprehensive test suite covering all service implem
 mvn test
 
 # Run tests for a specific module
-mvn test -pl common-platform-reference-master-data-core
+mvn test -pl core-common-reference-master-data-core
 
 # Run a specific test class
 mvn test -Dtest=CountryServiceImplTest

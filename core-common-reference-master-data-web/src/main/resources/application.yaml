@@ -1,6 +1,6 @@
 spring:
   application:
-    name: common-platform-reference-master-data
+    name: core-common-reference-master-data
     version: 1.0.0
     description: Reference Master Data Application
     team:

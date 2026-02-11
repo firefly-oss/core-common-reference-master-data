@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "common-platform-reference-master-data",
+    "title": "core-common-reference-master-data",
     "description": "Reference Master Data Application",
     "contact": {
       "name": "Firefly Software Solutions Inc",
