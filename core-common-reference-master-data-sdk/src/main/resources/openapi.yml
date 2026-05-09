@@ -8069,6 +8069,15 @@ components:
           enum:
           - ACTIVE
           - INACTIVE
+        isRequired:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
+        applicableProduct:
+          maxLength: 50
+          minLength: 0
+          type: string
         dateCreated:
           type: string
           format: date-time

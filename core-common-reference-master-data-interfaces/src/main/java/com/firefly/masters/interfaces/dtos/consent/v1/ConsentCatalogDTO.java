@@ -62,6 +62,27 @@ public class ConsentCatalogDTO {
     @NotNull(message = "Status is required")
     private StatusEnum status;
 
+    /**
+     * Whether the consent must be granted by the party for the dependent flow
+     * to proceed. Mandatory consents (e.g. terms of service) cannot be skipped
+     * by the user; optional consents (e.g. marketing) can.
+     */
+    private Boolean isRequired;
+
+    /**
+     * Display order used by the experience layer when rendering the consent
+     * list to the end user. Lower values are shown first.
+     */
+    private Integer sortOrder;
+
+    /**
+     * Optional product-type scope. When non-null, the consent is only relevant
+     * for that product type (e.g. {@code PERSONAL_LOAN}, {@code LEASING});
+     * when null, the consent applies to every product.
+     */
+    @Size(max = 50, message = "Applicable product must not exceed 50 characters")
+    private String applicableProduct;
+
     private LocalDateTime dateCreated;
     private LocalDateTime dateUpdated;
 }
