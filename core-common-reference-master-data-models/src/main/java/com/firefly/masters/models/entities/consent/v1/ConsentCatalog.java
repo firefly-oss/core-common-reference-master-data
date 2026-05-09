@@ -64,6 +64,15 @@ public class ConsentCatalog {
     @Column("status")
     private StatusEnum status;
 
+    @Column("is_required")
+    private Boolean isRequired;
+
+    @Column("sort_order")
+    private Integer sortOrder;
+
+    @Column("applicable_product")
+    private String applicableProduct;
+
     @Column("date_created")
     private LocalDateTime dateCreated;
 
