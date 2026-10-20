@@ -52,7 +52,7 @@ import org.springframework.web.reactive.config.EnableWebFlux;
         ),
         servers = {
                 @Server(
-                        url = "http://core.getfirefly.io/master-data",
+                        url = "https://openplatform.fireflysoftware.io/master-data",
                         description = "Development Environment"
                 ),
                 @Server(
