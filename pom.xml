@@ -12,6 +12,7 @@
     </parent>
 
     <artifactId>core-common-reference-master-data</artifactId>
+    <name>core-common-reference-master-data</name>
     <packaging>pom</packaging>
     <modules>
         <module>core-common-reference-master-data-core</module>

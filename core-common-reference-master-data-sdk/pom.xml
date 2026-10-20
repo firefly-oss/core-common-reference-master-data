@@ -10,6 +10,7 @@
     </parent>
 
     <artifactId>core-common-reference-master-data-sdk</artifactId>
+    <name>core-common-reference-master-data-sdk</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
