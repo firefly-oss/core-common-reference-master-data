@@ -44,7 +44,7 @@ springdoc:
     operationsSorter: method
     docExpansion: none
     filter: true
-  packages-to-scan: com.firefly.masters.web.controllers
+  packages-to-scan: io.fireflysoftware.masters.web.controllers
   paths-to-match: /api/**
 
 management:
@@ -69,6 +69,6 @@ logging:
 
   level:
     root: INFO
-    com.firefly: DEBUG
+    io.fireflysoftware: DEBUG
     org.springframework.r2dbc: DEBUG
     org.flywaydb: DEBUG
