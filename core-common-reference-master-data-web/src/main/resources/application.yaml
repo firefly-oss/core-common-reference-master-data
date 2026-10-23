@@ -72,3 +72,8 @@ logging:
     io.fireflysoftware: DEBUG
     org.springframework.r2dbc: DEBUG
     org.flywaydb: DEBUG
+
+firefly:
+  security:
+    resource-server:
+      strict-policy: true
